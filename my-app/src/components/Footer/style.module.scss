@@ -1,0 +1,19 @@
+.footer{
+    background-color:cornflowerblue;
+    color: #ffffff;
+    padding: 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .github{
+        color: #fff;
+        text-decoration: none;
+        line-height: 45px;
+        padding: 0 12px;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+    }
+}
