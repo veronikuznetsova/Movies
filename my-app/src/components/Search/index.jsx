@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Modal from "./components/Modal";
-import Movie from "./components/Movie";
-import styles from './style.module.scss'
+import Movie from "../Main/components/Movie";
+import styles from './style.module.scss';
+import { searchMovie } from "../../redux/actions/search";
 
-const Main = (props) => {
+const Search = (props) => {
 
     const [movies, setMovies] = useState([]);
 
@@ -11,9 +11,13 @@ const Main = (props) => {
         getMovies()
     },[])
 
+    useEffect(() => {
+      getMovies()
+    },[query])
+
     const getMovies = async () => {
         const response = await fetch(
-          `https://api.themoviedb.org/3/discover/movie?api_key=66eb3bde9cca0487f03e78b512b451e4`
+          `https://api.themoviedb.org/3/search/company?api_key=66eb3bde9cca0487f03e78b512b451e4&query=${query}`
         );
         const data = await response.json()
         setMovies(data.results)
@@ -35,4 +39,4 @@ const Main = (props) => {
     )
 }
 
-export default Main;
+export default Search;

@@ -3,11 +3,11 @@ import Input from "./components/Input";
 import Tabs from "./components/Tabs";
 import styles from './style.module.scss';
 
-const Header = () => {
+const Header = (props) => {
     return(
-        <header className={styles.header}>
+        <header className={styles.header} query={props.query}>
         <Tabs />
-        <Input />
+        <Input query={props.query}/>
         </header>
     )
 }
