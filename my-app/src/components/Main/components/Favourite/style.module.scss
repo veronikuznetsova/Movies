@@ -1,25 +1,18 @@
-.header{
-    background-color:cornflowerblue;
-    color: #ffffff;
-    padding: 10px 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: fixed; 
-    z-index: 1;
+.search{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-
-    .link{
-        margin-right: 0;
-        text-decoration: none;
-    }
+    padding: 90px 0 20px;
+    margin: auto;
 }
 
 .form {
     position: relative;
     width: 300px;
-    margin: 0;
+    margin: o auto;
     display: flex;
+    padding: 10px 0;
 
     .input {
         width: 100%;
@@ -47,7 +40,7 @@
     .button::before {
         content: '';
         color: #F9F0DA;
-        background-image: url(../../images/search.svg);
+        background-image: url(../../../../images/search.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -58,4 +51,26 @@
         left: 25%;
         fill: white;
     }
+
+    &:focus{
+        .input:focus{
+            color: black;
+        }
+        .button::before:focus{
+            background-image: url(../../../../images/cross.svg);
+        }
+    }
+}
+
+.moviesBlock{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination{
+    max-width: 600px;
+    width: 100%;
 }

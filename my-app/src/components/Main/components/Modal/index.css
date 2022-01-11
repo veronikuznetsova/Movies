@@ -1,0 +1,87 @@
+.modal{
+    box-sizing: border-box;
+    padding: 150px 50px 50px;
+    text-align: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 15px;
+    background-color: rgba(100, 148, 237, 0.151);
+
+}
+
+.heart_modal{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    fill:rgb(192, 209, 240);
+    width:50px;
+    height:50px;
+}
+
+
+.activeimg_modal{
+    display: flex;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    fill:cornflowerblue;
+    border: none;
+    width:50px;
+    height:50px;
+}
+
+.info_modal{
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    display: flex;
+    margin: 0;
+    position: relative;
+}
+
+.data_modal{
+    font-size: 16px;
+    height: fit-content;
+    margin: 0;
+}
+
+.overwiew_modal{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.span_modal{
+    margin-left: 20px;
+    border: 2px solid cornflowerblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.title_modal{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.main_modal{
+    width: 450px;
+    height: 500px;
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+
+}
+
+.titleOverview_modal{
+    display: inline-block;
+    text-align: left;
+}
+
+.common_modal{
+    display: flex;
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    justify-content: space-between;
+    flex-direction: column;
+}

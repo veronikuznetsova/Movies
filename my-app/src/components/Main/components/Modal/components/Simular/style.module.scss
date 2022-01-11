@@ -1,0 +1,38 @@
+.modal{
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 60px;
+    margin: -2px;
+    transform: translateZ(0);
+    padding: 0;
+    overflow-y: auto;
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+}
+
+.item{
+    box-sizing: border-box;
+    width: 17%;
+    height: 230px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    margin: 20px;
+    position: relative;
+    transition: 1s;
+    text-decoration: none;
+    color: black;
+    flex-shrink: 0;
+    display: block;
+    overflow: hidden;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.img{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 10px;
+}
