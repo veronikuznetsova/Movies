@@ -1,4 +1,8 @@
-function favouriteReducer(state = [], action) {
+const initialState = {
+    items:[]
+}
+
+function favouriteReducer(state = initialState, action) {
     switch(action.type) {
         case 'ADD_MOVIE':
             return {

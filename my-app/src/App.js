@@ -8,9 +8,12 @@ import Modal from './components/Main/components/Modal';
 import Simular from './components/Main/components/Modal/components/Simular';
 import Search from './components/Main/components/Search';
 import Error from './components/Main/components/Search/components/Error';
+import {Provider} from 'react-redux';
+import store from './redux';
 
 function App(props) {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <div className='app'>
       <Header />
@@ -24,6 +27,7 @@ function App(props) {
       <Footer />
       </div>
     </BrowserRouter>
+    </Provider>
   );
 }
 

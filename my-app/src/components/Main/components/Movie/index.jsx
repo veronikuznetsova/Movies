@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from "react";
 import './index.css';
 import { Link, useParams } from "react-router-dom";
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { addMovie } from "../../../../redux/actions/favouriteMovie";
-import store from "../../../../redux";
 
-const MoviesContext = React.createContext();
-const { Provider } = MoviesContext;
+const Movie = (props) => {
+  const dispatch = useDispatch();
+  const active = useSelector((store) => store.favourite.items.find(item => item == props.id))
 
-const Movie = (props, {addMovie, movies}) => {
-
-  const [active, setActive] = useState(false)
+  console.log(active)
 
   let onClick = (e) => {
     e.preventDefault();
-    console.log('hello');
-    setActive(!active);
-    props.addMovie(movies);
+    dispatch(addMovie(props.id))
   }
   
   return (
@@ -32,20 +28,5 @@ const Movie = (props, {addMovie, movies}) => {
 
 };
 
-export {
-  MoviesContext
-};
+export default Movie;
 
-function mapStateToProps(state){
-  return {
-      movies: state.movie.movies
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addMovie: (id) => dispatch(addMovie(id)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Movie);

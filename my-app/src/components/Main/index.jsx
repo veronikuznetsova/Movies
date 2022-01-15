@@ -19,6 +19,7 @@ const Main = (props) => {
         ({data}) => {
           setMovies(data.results)
           setPageQty(data.total_pages)
+          window.scrollTo(0,0)
         }
       )
     }, [page])
