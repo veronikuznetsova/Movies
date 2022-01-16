@@ -17,16 +17,20 @@ const Search = () => {
     const [page, setPage] = useState(1);
     const [pageQty, setPageQty] = useState(0);
     const [error, setError] = useState('false');
+    const [results, setResults] = useState();
 
     useEffect(() => {
       axios.get(BASE_URL + `&query=${newQuery}`+ `&page=${page}` ).then(
         ({data}) => {
           if(data.results.length===0) {
             setError('true')
+            window.scrollTo(0,0)
           } else {
             setError('false')
             setMovies(data.results)
             setPageQty(data.total_pages)
+            setResults(data.total_results)
+            window.scrollTo(0,0)
           }
         }
       )
@@ -37,6 +41,7 @@ const Search = () => {
     } else {
       return(
         <main className={styles.search} >
+          <div className={styles.results}>Total results: {results}</div>
          <div className={styles.moviesBlock}>
          {movies.map(movie => (
           <Movie
@@ -48,7 +53,6 @@ const Search = () => {
           id={movie.id}
           />
         ))}
-         </div>
         {!!pageQty && (
           <Pagination 
           className={styles.pagination} 
@@ -57,11 +61,11 @@ const Search = () => {
           showLastButton 
           count={pageQty}
           page={page}
-          color="primary"
           size="large"
           onChange={(_, num) => setPage(num)}
         />
         )}
+         </div>
       </main>
     )
     }

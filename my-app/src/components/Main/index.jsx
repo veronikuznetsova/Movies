@@ -44,7 +44,6 @@ const Main = (props) => {
           showLastButton 
           count={pageQty}
           page={page}
-          color="primary"
           size="large"
           onChange={(_, num) => setPage(num)}
           renderItem={

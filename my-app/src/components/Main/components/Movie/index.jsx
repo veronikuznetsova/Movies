@@ -2,17 +2,19 @@ import React, { useEffect, useState } from "react";
 import './index.css';
 import { Link, useParams } from "react-router-dom";
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { addMovie } from "../../../../redux/actions/favouriteMovie";
+import { addMovie, removeMovie } from "../../../../redux/actions/favouriteMovie";
 
 const Movie = (props) => {
   const dispatch = useDispatch();
   const active = useSelector((store) => store.favourite.items.find(item => item == props.id))
 
-  console.log(active)
-
   let onClick = (e) => {
     e.preventDefault();
     dispatch(addMovie(props.id))
+
+    if (active) {
+      dispatch(removeMovie(props.id))
+    }
   }
   
   return (

@@ -19,13 +19,16 @@ const Simular = () => {
 
   
   return (
-    <div className={styles.modal} >
+    <div className={styles.modalCommon} >
+      <h1 className={styles.modalText}>RECOMMENDATION</h1>
+      <div className={styles.modal}>
        {simular.map(movie => (
            <Link to= {"/modal/:"+`${movie.id}`} key={movie.id} id={movie.id} className={styles.item}>
                 <img src={"https://image.tmdb.org/t/p/w500/"+ movie.poster_path} alt={movie.title} className={styles.img} />
-                <p>{movie.title}</p>
+                {/* <p>{movie.title}</p> */}
             </Link>
         ))}
+        </div>
     </div>
   );
 };

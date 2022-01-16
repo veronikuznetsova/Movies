@@ -1,10 +1,11 @@
 .error{
     padding-top: 70px;
+    min-height: calc(100vh - 50px);
 }
 
 .img{
     background-image: url(../../../../../../images/error.jpeg);
-    height: 665px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
