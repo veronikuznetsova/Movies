@@ -25,7 +25,6 @@ const Simular = () => {
        {simular.map(movie => (
            <Link to= {"/modal/:"+`${movie.id}`} key={movie.id} id={movie.id} className={styles.item}>
                 <img src={"https://image.tmdb.org/t/p/w500/"+ movie.poster_path} alt={movie.title} className={styles.img} />
-                {/* <p>{movie.title}</p> */}
             </Link>
         ))}
         </div>

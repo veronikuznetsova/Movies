@@ -20,7 +20,12 @@ const Header = (props) => {
             <form className={styles.form}>
          <input type="text" placeholder="Search" label='query' value={query || ''} onChange={onChange} className={styles.input}></input>
          <Link to= {"/search/:"+`${query}`} className={styles.link} >
-         <button type="submit" className={styles.button} onClick={onClick}></button>
+         <button type="submit" className={styles.button} onClick={onClick}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
          </Link>
          </form>
         </header>
