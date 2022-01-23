@@ -1,8 +1,8 @@
-import { Modal, Pagination } from "@mui/material";
+import { Pagination } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import styles from './style.module.scss';
 import axios from "axios";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Movie from '../Movie';
 import Error from "./components/Error";
 

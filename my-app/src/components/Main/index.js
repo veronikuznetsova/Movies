@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import Movie from "./components/Movie";
 import styles from './style.module.scss';
 import axios from "axios";
-import { NavLink, Link } from "react-router-dom";
-import Input from './components/Input';
+import { Link } from "react-router-dom";
 
 const BASE_URL= 'https://api.themoviedb.org/3/discover/movie?api_key=66eb3bde9cca0487f03e78b512b451e4'
 

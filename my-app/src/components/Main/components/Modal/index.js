@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import Simular from "./components/Simular";
 import { useDispatch, useSelector } from 'react-redux';
 import { addMovie, removeMovie } from "../../../../redux/actions/favouriteMovie";
-import favouriteReducer from "../../../../redux";
 
 const Modal = (props) => {
 
@@ -22,7 +21,7 @@ const Modal = (props) => {
         window.scrollTo(0, 0)
       }
     );
-  }, [newId, active])
+  }, [newId])
 
   let onClick = (e) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Tab from "./components/Tab";
 import './index.css';
 import Star from '../../../../images/star.svg';
