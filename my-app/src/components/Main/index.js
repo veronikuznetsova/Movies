@@ -23,7 +23,7 @@ const Main = (props) => {
         }
       )
     }, [page])
-        
+   
     return(
         <main className={styles.main}>
         {movies.map(movie => (

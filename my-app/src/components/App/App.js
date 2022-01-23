@@ -1,16 +1,15 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
-import Favourite from './components/Main/components/Favourite';
-import Modal from './components/Main/components/Modal';
-import Simular from './components/Main/components/Modal/components/Simular';
-import Search from './components/Main/components/Search';
-import Error from './components/Main/components/Search/components/Error';
+import Footer from '../Footer';
+import Header from '../Header';
+import Main from '../Main';
+import Favourite from '../Main/components/Favourite';
+import Modal from '../Main/components/Modal';
+import Search from '../Main/components/Search';
+import Error from '../Main/components/Search/components/Error';
 import {Provider} from 'react-redux';
-import store from './redux';
-import Homepage from './components/Main/components/Homepage';
+import store from '../../redux';
+import Homepage from '../Main/components/Homepage';
 
 function App(props) {
   return (

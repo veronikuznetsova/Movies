@@ -1,15 +1,15 @@
 const initialState = {
-    items:[]
+    items: []
 }
 
 function favouriteReducer(state = initialState, action) {
-    switch(action.type) {
+    switch (action.type) {
         case 'ADD_MOVIE':
             return {
                 items: state.items.concat(action.payload)
             }
         case 'REMOVE_MOVIE':
-        return {
+            return {
                 items: state.items.filter(item => item !== action.payload)
             }
         default:
