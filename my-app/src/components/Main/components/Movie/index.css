@@ -1,0 +1,66 @@
+.movie{
+    box-sizing: border-box;
+    width: 300px;
+    height: 430px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    margin: 20px auto;
+    position: relative;
+    transition: 1s;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+}
+
+.movie:hover{
+    transform: scale(1.1);
+}
+
+.main{
+    width: 250px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.text{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.heart{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    fill:rgba(255, 255, 255, 0.644);
+    width:50px;
+    height:50px;
+}
+
+.heart:hover{
+    fill:rgb(255, 255, 255);
+}
+
+
+.activeimg{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    fill:rgba(255, 0, 0, 0.527);
+    border: none;
+    width:50px;
+    height:50px;
+} 

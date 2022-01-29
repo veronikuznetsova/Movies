@@ -1,0 +1,15 @@
+.tabs{
+    display: flex;
+    margin: 0;
+}
+
+.link{
+    text-decoration: none;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.active{
+    border-bottom: 1px solid white;
+}

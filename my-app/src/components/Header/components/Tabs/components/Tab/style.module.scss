@@ -1,0 +1,15 @@
+.tab{
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    .tabImage{
+        width: 20px;
+        height: 20px;
+    }
+}

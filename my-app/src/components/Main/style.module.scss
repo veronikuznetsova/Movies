@@ -1,0 +1,28 @@
+.main{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    min-height: calc(100vh - 40px);
+    background-image: url(../../images/bg.jpeg);
+    background-color: rgba(0, 121, 201, 0.308);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
+    .pagination{
+        padding: 25px 0;
+        display: flex;
+        align-items: center;
+
+        .item{
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    a{display: block;}
+}
+

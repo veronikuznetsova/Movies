@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arvo';
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../../../../images/bg4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.common {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #F1FAEE;
+    font-size: 64px;
+}
+
+.roller {
+    height: 66px;
+    line-height: 64px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(187, 66, 45);
+    font-size: 60px;
+    text-shadow: 1px 1px 1px grey, 0 0 1px white, 0 0 0.1em white;
+}
+
+.spareTime {
+    font-style: italic;
+    letter-spacing: 16px;
+    margin-top: 0;
+    color: #A8DADC;
+}
+
+.roller .rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;
+    font-size: 50px;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -64px;
+    }
+    50% {
+        top: -128px;
+    }
+    73% {
+        top: -196px;
+    }
+}

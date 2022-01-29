@@ -1,0 +1,18 @@
+.footer{
+    background-color:rgba(0, 0, 0, 0.856);
+    color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .github{
+        color: #fff;
+        text-decoration: none;
+        line-height: 45px;
+        padding: 0 12px;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+    }
+}
