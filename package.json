@@ -28,8 +28,9 @@
         "web-vitals": "^2.1.2"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build"
+        "build": "webpack",
+        "watch": "webpack --watch",
+        "start": "webpack serve"
     },
     "eslintConfig": {
         "extends": [
